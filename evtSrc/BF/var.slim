@@ -1,0 +1,23 @@
+/ tobechange // !important save indexC.sliml to validate change
+-ID = "1209"
+-$TH = "TH4_petit-dej"
+-$url = "http://www.ideascomfort.be/befr/"
+-$alt_title = ""
+
+-$txtBtn  = ["DÉCOUVREZ","NOTRE SÉLECTION"]
+-$linkRay = "#{$url}boutique/rayon_evenement.aspx?urlLangue=fr&nbp=99&pg=0&evenement_id="+ID
+
+-$lk_pdt1 = "#{$url}cuisine/dessert/4-mugs-chatons/7516313.html"
+-$lk_pdt2 = "#{$url}cuisine/ustensiles-cuisine/pince-a-toast/7117013.html"
+-$lk_pdt3 = "#{$url}cuisine/couverts-couteaux/couteau-a-beurre-mousse/7481310.html"
+
+-gastart  = "ga('local.send', 'event', 'EncartHP', "
+-gaend    = " document.location.pathname);"
+-$ga_pdt1 = "#{gastart}'pk1_4-mugs-chatons-7516313',#{gaend}"
+-$ga_pdt2 = "#{gastart}'pk2_pince-a-toasts-7117013',#{gaend}"
+-$ga_pdt3 = "#{gastart}'pk3_couteau-a-beurre-mousse-7481310',#{gaend}"
+
+-$ga_ray_BG  = "ga('local.send', 'event', 'EncartHP', '"+$TH+"-BG_id-"+ID+"', document.location.pathname);";
+-$ga_ray_btn  = "ga('local.send', 'event', 'EncartHP', '"+$TH+"-btn_id-"+ID+"', document.location.pathname);";
+
+/ -$styleIE = '<!--[if lte IE 9]> <style type="text/css"> .pck3{top: 10px;} .title-pck3, .sub1-pck3, .sub2-pck3{left: 690px;} </style> <![endif]-->'

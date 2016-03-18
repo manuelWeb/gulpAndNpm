@@ -1,0 +1,96 @@
+// functions.scss
+/// Slightly lighten a color
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+$fontSerif: Georgia, "Times New Roman", Times, serif;
+$font-stack-arial: Arial, Helvetica, sans-serif;
+$bg-btn: #42561A;
+
+body, ul {margin: 0;}
+ul {list-style: none;}
+.centralEvent {
+  position: relative;
+  width: 964px; height: 465px;
+  margin: 0;
+  background: url(bg.jpg) no-repeat;
+}
+
+/* js globalLink */
+#globalLink {
+  position: absolute; top: 0; left: 0;
+  width: 964px; height: 465px;
+  // background: url(evtFirst_bd-diffu.png) no-repeat left bottom; // enable to fade bottom insert
+}
+
+.pck1, .pck2, .pck3 {
+  position: absolute; top: 72px; /*border: 1px solid red;*/
+  a {display: block; height: inherit;}
+}
+.pck1 {
+  left: 230px;
+  width: 176px; height: 180px;
+}
+.pck2 {
+  left: 410px;
+  width: 164px; height: 180px;
+}
+.pck3 {
+  left: 578px;
+  width: 166px; height: 176px;
+}
+
+.aPartirDe {top: 40px; left: 758px; }
+ 
+.gradient-btn-evtfirst {
+  border-radius: 56px;
+  background-color: $bg-btn;
+  // background-image: linear-gradient(#FF0000, #D45050 50%, #A60000 65%, #A60000);
+}
+.js-btn {
+  position: relative;
+  display: inline-block;
+  height: 50px;
+  padding: 0 16px; margin: 196px 0 0 760px ;
+  text-align: center;
+  border: 2px solid #FFFFFF; color: #FFFFFF;
+  font: italic 600 16px/70px $font-stack-arial; text-decoration: none;
+  // text-shadow: 0 0 4px darken( $bg-btn, 10% );
+  transition: all .8s;
+  &:hover{text-shadow: 0 0 3px #FFF;}
+  // @include text-shadow(0 0 7px darken( $bg-btn, 10% ));
+  span {
+    display: inline-block;
+    line-height: 120%;
+    + span {
+      position: relative;
+    }
+    > span {
+      font-size: 21px;
+    }
+  }
+  // img {vertical-align: middle;}
+  .reflet {
+    position: absolute; left: 10px; top: 3px;
+    width: 87%; height: 32px;
+    border-radius: 16px;
+    background: tint( $bg-btn, 55% );
+    background: linear-gradient(tint( $bg-btn, 55% ), $bg-btn);
+    opacity: 0.6;
+  }
+  &:before{
+    content: "";
+    position: absolute;
+    top: -2px; left: -2px;
+    width: 100%; height: inherit;
+    padding: 2px;
+    border-radius: 56px;
+    box-shadow: 0 0 15px #406F6F;
+    transition: all .8s;
+    background-color: rgba(0,0,0,0);
+    // border: 1px solid #EB121D;
+  }
+  &:hover:before {
+    background-color: rgba(0,0,0,0.2);
+  }
+}

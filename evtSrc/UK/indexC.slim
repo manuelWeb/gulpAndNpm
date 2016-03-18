@@ -1,0 +1,38 @@
+== Slim::Template.new('evtSrc/var_global.slim').render
+== Slim::Template.new('evtSrc/UK/var.slim').render
+doctype strict
+html[xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"]
+  head
+    meta[http-equiv="Content-Type" content="text/html;charset=UTF-8"]
+    title == $TH
+    link[type="text/css" rel="stylesheet" href="index.css"]
+    / link[type="text/css" rel="stylesheet" href="index.scss"]
+    script[src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"]
+  body
+    / == $styleIE
+    #evtFirst_Link.centralEvent
+      #globalLink
+      span.titleEvt
+        img src="title.png" alt==$alt_title
+      ul
+        li#id_diapo1.pck1
+          a[href==($lk_pdt1) onclick==($ga_pdt1)]
+            img src="pck1.png" alt=""
+        li#id_diapo2.pck2
+          a[href==($lk_pdt2) onclick==($ga_pdt2)]
+            img src="pck2.png" alt=""
+        li#id_diapo3.pck3
+          a[href==($lk_pdt3) onclick==($ga_pdt3)]
+            img src="pck3.png" alt=""
+        
+      .aPartirDe
+        img src="aPartirDe.png" alt=""
+      a.js-btn.gradient-btn-evtfirst[href==$linkRay onclick==$ga_ray_btn]
+        span.reflet
+        span
+         == $txtBtn[0]
+         br
+         == $txtBtn[1]
+
+    script[type="text/javascript" src="track.js"]
+    / script[type="text/javascript" src="firstEvt_reveal.js"]

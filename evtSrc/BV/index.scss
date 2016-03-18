@@ -1,0 +1,99 @@
+// functions.scss
+/// Slightly lighten a color
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+$fontSerif: Georgia, "Times New Roman", Times, serif;
+$font-stack-arial: Arial, Helvetica, sans-serif;
+$bg-btn: #D30833;
+body, ul {margin: 0;}
+ul {list-style: none;}
+.centralEvent {
+  position: relative;
+  width: 964px; height: 465px;
+  margin: 0;
+  background: url(bg.jpg) no-repeat;
+}
+
+/* js globalLink */
+
+#globalLink {
+  position: absolute; top: 0; left: 0;
+  width: 964px; height: 465px;
+  background: url(evtFirst_bd-diffu.png) no-repeat left bottom;
+}
+/* pck'numpck'*/
+.pck1, .pck2, .pck3, .pck4, .pck5, .pck6, .titleEvt, .aPartirDe {position: absolute; }
+/* display:none;opacity:0; cf firstEvt_reveal.js */
+.titleEvt {top: 2px; left: 10px;}
+.pck1 a, .pck2 a, .pck3 a, .pck4 a, .pck5 a, .pck6 a {
+  & img{
+    position: relative;
+    width: 100%; height: auto;
+    transition: all .6s;
+    border: 0;
+  }
+  &:hover img {
+    z-index: 2;
+    width: 110%;
+  }
+
+}
+.pck1,.pck4 {top: 66px; left: 12px; }
+.pck2,.pck5 {top: 64px; left: 248px; }
+.pck3,.pck6 {top: 68px; left: 472px; }
+
+.aPartirDe {top: 40px; left: 758px; }
+ 
+.gradient-btn-evtfirst {
+  border-radius: 56px;
+  background-color: $bg-btn;
+  // background-image: linear-gradient(#FF0000, #D45050 50%, #A60000 65%, #A60000);
+}
+.js-btn {
+  position: relative;
+  display: inline-block;
+  height: 56px;
+  padding: 0 34px; margin: 192px 0 0 748px;
+  text-align: center;
+  border: 3px solid #FFFFFF; color: #FFFFFF;
+  font: bold 16px/76px $font-stack-arial; text-decoration: none;
+  text-shadow: 0 0 4px #A60000;
+  transition: all .8s;
+  &:hover{text-shadow: 0 0 3px #FFF;}
+  // @include text-shadow(0 0 7px darken( $bg-btn, 10% ));
+  span {
+    display: inline-block;
+    line-height: 130%;
+    + span {
+      position: relative;
+    }
+    > span {
+      font-size: 21px;
+    }
+  }
+  // img {vertical-align: middle;}
+  .reflet {
+    position: absolute; left: 10px; top: 3px;
+    width: 90%; height: 32px;
+    border-radius: 16px;
+    background-color: tint( $bg-btn, 85% );
+    background-image: linear-gradient(tint( $bg-btn, 85% ), $bg-btn);
+    opacity: 0.65;
+  }
+  &:before{
+    content: "";
+    position: absolute;
+    top: -3px; left: -3px;
+    width: 100%; height: inherit;
+    padding: 3px;
+    border-radius: 56px;
+    box-shadow: 0 0 15px #406F6F;
+    transition: all .8s;
+    background-color: rgba(0,0,0,0);
+    // border: 1px solid #EB121D;
+  }
+  &:hover:before {
+    background-color: rgba(0,0,0,0.2);
+  }
+}

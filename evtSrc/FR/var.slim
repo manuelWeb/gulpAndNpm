@@ -1,0 +1,20 @@
+/ tobechange // !important save indexC.sliml to validate change
+-$url = "http://www.tempsl.fr/fr/"
+
+-$txtBtn  = ["Découvrez toute","la sélection"]
+-$linkRay = "#{$url}boutique/rayon_evenement.aspx?urlLangue=fr&nbp=99&pg=0&evenement_id="+$ID[:fr]
+
+-$lk_pdt1 = "#{$url}cuisine/couverts-couteaux/menagere-bouton-d-or/0812412.html"
+-$lk_pdt2 = "#{$url}cuisine/linge-table/6-torchons-vert-anis/0469312.html"
+-$lk_pdt3 = "#{$url}entretien-rangement/eponges-brosses/brosse-multi-usages/6257315.html"
+
+-gastart  = "ga('local.send', 'event', 'EncartHP', "
+-gaend    = " document.location.pathname);"
+-$ga_pdt1 = "#{gastart}'pk1_menagere-bouton-d-or-0812412',#{gaend}"
+-$ga_pdt2 = "#{gastart}'pk2_6-torchons-vert-anis-0469312',#{gaend}"
+-$ga_pdt3 = "#{gastart}'pk3_brosse-multi-usages-6257315',#{gaend}"
+
+-$ga_ray_BG  = "ga('local.send', 'event', 'EncartHP', '"+$TH+"-BG_id-"+$ID[:fr]+"', document.location.pathname);"
+-$ga_ray_btn  = "ga('local.send', 'event', 'EncartHP', '"+$TH+"-btn_id-"+$ID[:fr]+"', document.location.pathname);"
+
+/ -$styleIE = '<!--[if lte IE 9]> <style type="text/css"> .pck3{top: 10px;} .title-pck3, .sub1-pck3, .sub2-pck3{left: 690px;} </style> <![endif]-->'
